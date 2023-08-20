@@ -1718,7 +1718,157 @@ section#slicebox {
 
 
 
+/*--------------------------------------------------------------
+#SLICETEXT
+--------------------------------------------------------------*/
 
+h2.h2_half {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 48px 0 0 0;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: transparent !important;
+    text-transform: uppercase;
+    text-shadow: none !important;
+}
+	@media only screen and (max-width: 1100px) {
+	  h2.h2_half {
+		font-size: 4rem;
+	  }
+	}
+	@media only screen and (max-width: 900px) {
+	  h2.h2_half {
+		font-size: 3rem;
+	  }
+	}
+	@media only screen and (max-width: 700px) {
+	  h2.h2_half {
+		font-size: 2.2rem;
+	  }
+	}
+	@media only screen and (max-width: 480px) {
+	  h2.h2_half {
+		font-size: 1.6rem;
+	  }
+	}
+	h2.h2_half:hover span.span_half:nth-child(1) {
+	  transform: translateY(-1rem);
+	}
+	@media only screen and (max-width: 1100px) {
+	  h2.h2_half:hover span.span_half:nth-child(1) {
+		transform: translateY(-0.7rem);
+	  }
+	}
+	@media only screen and (max-width: 900px) {
+	  h2.h2_half:hover span.span_half:nth-child(1) {
+		transform: translateY(-0.55rem);
+	  }
+	}
+	@media only screen and (max-width: 700px) {
+	  h2.h2_half:hover span.span_half:nth-child(1) {
+		transform: translateY(-0.47rem);
+	  }
+	}
+	@media only screen and (max-width: 480px) {
+	  h2.h2_half:hover span.span_half:nth-child(1) {
+		transform: translateY(-0.4rem);
+	  }
+	}
+	h2.h2_half:hover span.span_half:nth-child(2) {
+	  transform: translateY(1rem);
+	}
+	@media only screen and (max-width: 1100px) {
+	  h2.h2_half:hover span.span_half:nth-child(2) {
+		transform: translateY(0.7rem);
+	  }
+	}
+	@media only screen and (max-width: 900px) {
+	  h2.h2_half:hover span.span_half:nth-child(2) {
+		transform: translateY(0.55rem);
+	  }
+	}
+	@media only screen and (max-width: 700px) {
+	  h2.h2_half:hover span.span_half:nth-child(2) {
+		transform: translateY(0.47rem);
+	  }
+	}
+	@media only screen and (max-width: 480px) {
+	  h2.h2_half:hover span.span_half:nth-child(2) {
+		transform: translateY(0.4rem);
+	  }
+	}
+	h2.h2_half:hover span.span_half:nth-child(3) {
+	  opacity: 1;
+	  transition: opacity 700ms ease;
+	}
+	h2.h2_half span.span_half:nth-child(1), h2.h2_half span.span_half:nth-child(2) {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  color: #ffffff;
+	  transition: 0.5s;
+	  overflow: hidden;
+	}
+	h2.h2_half span.span_half:nth-child(1) {
+	  clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 50%);
+	}
+	h2.h2_half span.span_half:nth-child(2) {
+	  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+	}
+	h2.h2_half span.span_half:nth-child(3) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: opacity 350ms ease;
+		font-size: 1.8rem;
+		color: #fff;
+		background: #ff0000;
+		width: 97.5%;
+		/* padding-left: 5px; */
+		padding: 3px 0 5px 0;
+		text-align: center;
+		letter-spacing: 0.5rem;
+		word-spacing: 1rem;
+		line-height: 100%;
+	}
+	@media only screen and (max-width: 1100px) {
+	  h2.h2_half span.span_half:nth-child(3) {
+		font-size: 1.2rem;
+	  }
+	}
+	@media only screen and (max-width: 900px) {
+	  h2.h2_half span.span_half:nth-child(3) {
+		font-size: 1rem;
+		width: 97%;
+		letter-spacing: 4px;
+	  }
+	}
+	@media only screen and (max-width: 700px) {
+	  h2.h2_half span.span_half:nth-child(3) {
+		font-size: 0.85rem;
+		width: 96%;
+		letter-spacing: 3px;
+		word-spacing: 0.5rem;
+	  }
+	}
+	@media only screen and (max-width: 480px) {
+	  h2.h2_half span.span_half:nth-child(3) {
+		font-size: 0.65rem;
+		letter-spacing: 2px;
+		word-spacing: 0.2rem;
+	  }
+	}
+
+
+/*--------------------------------------------------------------
+#SLICETEXT
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -2142,6 +2292,8 @@ img.main_logo {
 	backdrop-filter: blur(7.2px);
 	-webkit-backdrop-filter: blur(7.2px);
 	border: 1px solid rgba(255, 255, 255, 0.48);
+	color: white;
+}
   }
 
   .main-timeline .timeline-content:hover {
@@ -2182,6 +2334,7 @@ img.main_logo {
 	position: absolute;
 	top: -20px;
 	left: -60px;
+	color:#000000;
 	background: rgb(255 255 255);
 	/* border-radius: 16px; */
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2931,16 +3084,31 @@ section#GALLERY {
 }
 
 
-.word {
-	margin: auto;
-	color: white;
-	font: 700 normal 2.5em 'Raleway';
-	text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+/* auto type word ----------- */
+div.middle{
+	top: 400px;
+	right:0;
+	bottom:0;
+	left:0;
+	position:absolute;
+	margin:auto;
+	height:120px;
+	width:100%;
+	text-align:center;
+  }
+  .text-type-animation{
+	text-transform:uppercase;
+	font-size:60px;
+	
+  }
+  .txt-rotate{
+	color:rgb(255, 255, 255);
+	font-size: 40px;
   }
 
 
 
-
+/* auto type word ----------- */
 
 
 /* Smartphones (portrait and landscape) ----------- */

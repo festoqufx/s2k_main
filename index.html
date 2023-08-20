@@ -21,6 +21,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,15 +91,38 @@
             <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
               <div class="carousel-container">
                 <div class="carousel-content">
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
                   <img class="main_logo" src="./img/logo.png">
+				  <p>&nbsp;</p>
                   <h2 class="animate__animated animate__fadeInDown">FERDINAND <span style="color: black;">ESTOQUE</span>
                   </h2>
                   <p class="animate__animated animate__fadeInUp">a.k.a.</p>
-                  <h3>BLACK RAVEN</h3>
-                  <p>&nbsp;</p>
-                  <div class="word">
-                    <p>&nbsp;</p>
-                  </div>
+				  <p>&nbsp;</p>
+				  <p>&nbsp;</p>
+				  <p>&nbsp;</p>
+				  <p>&nbsp;</p>
+				  <p>&nbsp;</p>
+			
+				  <div class="clearfix">&nbsp;</div>
+				
+                  <!-- <h3>BLACK RAVEN</h3> -->
+				  <h2 class="h2_half">
+					BLACK RAVEN
+				  <span class="span_half">BLACK RAVEN</span>
+				  <span class="span_half">BLACK RAVEN</span>
+				  <span class="span_half">--- RAVENOM ---</span>
+				</h2>
+				<p>&nbsp;</p>
+		
+           <div class="middle">
+
+    <span
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='["WEB DESIGN", "WEB DEVELOPMENT", "BRANDING", "REBRANDING", "MOTION and GRAPHIC DESIGN", "WEB MAINTENANCE", "WEB CONSULTING"]'></span>
+  
+ </div>
                   <!-- <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a> -->
                 </div>
               </div>
@@ -318,7 +342,7 @@
                     <p class="description">
                       <strong> IMPLEMENTATION ANALYST </strong>
                       <br>
-                      <!-- JULY 2016<br> --> AEM, Visual Studio, Bastion Host, Bootstrap, HTML5, CSS, JS, SharePoint <br> Fulltime
+                      <!-- JULY 2016<br> -->AEM, Adobe Creative Suite, Bastion Host, JIRA, SharePoint, Figma, Tableau, TFS, GIT <br> Fulltime
                     </p>
                   </a>
                 </div>
@@ -332,7 +356,7 @@
                     <p class="description">
                       <strong>BACK-END WEB DEVELOPER</strong>
                       <br>
-                      <!-- OCT 2015 - JULY 2016<br> --> Laravel, MySQL, MsSQL, Postgres, Wordpress, Bootstrap, HTML5, CSS, JS <br> Fulltime
+                      <!-- OCT 2015 - JULY 2016<br> --> Laravel, MySQL, MsSQL, Git, Postgres, Wordpress, Bootstrap, HTML5, CSS, JS <br> Fulltime
                     </p>
                   </a>
                 </div>
@@ -374,7 +398,7 @@
                     <p class="description">
                       <strong>MULTIMEDIA WEB DESIGNER</strong>
                       <br>
-                      <!-- SEPT 2013 - OCT 2014<br> --> Wordpress, Genesis, Initializr, PHP/Mysql, Bootstrap, HTML5, JS, CSS <br> Project based
+                      <!-- SEPT 2013 - OCT 2014<br> --> Wordpress, Genesis, Git, Initializr, PHP/Mysql, Bootstrap, HTML5, JS, CSS <br> Project based
                     </p>
                   </a>
                 </div>
@@ -715,7 +739,7 @@
 		<div class="height_divider_2"></div>
 
 		<div class="clearfix">&nbsp;</div>
-\
+
 
 	</section> 
     <!-- End Cta Section -->
@@ -1541,8 +1565,8 @@
       <div class="container">
         <div class="copyright"><span id="demo"></span>&nbsp;&copy;&nbsp;Copyright&nbsp;<strong><span>FERDINAND&nbsp;ESTOQUE</span>
           </strong>.&nbsp;All&nbsp;Rights&nbsp;Reserved</div>
-        <div class="credits"> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+        <!-- <div class="credits"> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div> -->
       </div>
 <br><br>
     </footer>
@@ -1583,49 +1607,62 @@
     <!-- words -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      var words = ['WEB DESIGN', 'WEB DEVELOPMENT', 'BRANDING', 'REBRANDING', 'MOTION and GRAPHIC DESIGN', 'WEB MAINTENANCE', 'WEB CONSULTING'],
-        part,
-        i = 0,
-        offset = 0,
-        len = words.length,
-        forwards = true,
-        skip_count = 0,
-        skip_delay = 15,
-        speed = 70;
-      var wordflick = function() {
-        setInterval(function() {
-          if (forwards) {
-            if (offset >= words[i].length) {
-              ++skip_count;
-              if (skip_count == skip_delay) {
-                forwards = false;
-                skip_count = 0;
-              }
-            }
-          } else {
-            if (offset == 0) {
-              forwards = true;
-              i++;
-              offset = 0;
-              if (i >= len) {
-                i = 0;
-              }
-            }
-          }
-          part = words[i].substr(0, offset);
-          if (skip_count == 0) {
-            if (forwards) {
-              offset++;
-            } else {
-              offset--;
-            }
-          }
-          $('.word').text(part);
-        }, speed);
-      };
-      $(document).ready(function() {
-        wordflick();
-      });
+     var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 100) || 4000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 150 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 1000;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #FFFFFF }";
+  document.body.appendChild(css);
+};
     </script>
     <!--  words  -->
     <!-- 3d slider -->
