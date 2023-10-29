@@ -6,7 +6,7 @@
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="description" content="Hi, I am Ferdinand Belleza Estoque a.k.a. Black Raven, I design and build functional websites and this is my website portfolio." />
-      <meta name="keywords" content="Ferdinand Estoque, Ferdinand Belleza Estoque, Estoque, Black Raven Estoque, Raven Estoque" />
+      <meta name="keywords" content="Ferdinand Estoque, Ferdinand Belleza Estoque, Estoque, Black Raven Estoque, Raven Estoque, Ravenom" />
       <meta name="author" content="Ferdinand Estoque" />
       <link rel="icon" type="image/png" href="./img/estoque1.png">
       <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet" type="text/css">
@@ -36,7 +36,11 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- carousel -->
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/carousel.js"></script>
 
+  <!-- carousel -->
 
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91CCV77503"></script>
@@ -48,9 +52,13 @@
   gtag('config', 'G-91CCV77503');
 </script>
 
-
+<script>
+	document.getElementById("s2k").innerHTML = 
+	"The full URL of this page is:<br>" + window.location.href;
+	</script>
+	
   </head>
-  <body>
+  <body id="s2k">
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center ">
       <div class="container d-flex align-items-center justify-content-between ">
@@ -69,6 +77,12 @@
             <li>
               <a class="nav-link scrollto" href="#About">About</a>
             </li>
+			<li>
+				<a class="nav-link scrollto" href="#Experience">Experience</a>
+			  </li>
+			  <li>
+				<a class="nav-link scrollto" href="#skills">Skills</a>
+			  </li>
 			<li>
 				<a class="nav-link scrollto " href="#portfolio">Portfolio</a>
 			  </li>
@@ -189,7 +203,7 @@
             <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
               <div class="carousel-container">
                 <div class="carousel-content">
-                  <!-- <h2 class="animate__animated animate__fadeInDown">Rebranding</h2><p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p><a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Read More</a> -->
+                  
                   <div class="center" style="margin: 0 auto;">
 
 					<p>click me</p>
@@ -240,7 +254,27 @@
         </div>
       </div>
     </section>
-    <!-- End Hero -->
+
+	    <!-- ======= BLANK
+
+
+	   <section id="about" class="about">
+		<div class="container">
+			<div class="section-title">
+				<h2>About</h2>
+				<p>Hi, I am Black Raven, BS InfoTech graduate. I live and a freelancer in Cavite Philippines. I offer Creative Direction for online media as well as Screen &amp; Interface design. 
+					I tell visual stories based on a strong idea in an aesthetic context. 
+					I understand design in general as philosophical handcraft. I believe in the magic of details. Love, light and rhythm.</p>
+			</div>
+
+			<div class="container_fluid">
+				BLANK
+			</div>
+				
+		</div>
+			
+ BLANK ======= -->
+
     <!-- ======= About Section ======= -->
     <!-- <section id="about" class="about"><div class="container"><div class="section-title"><h2>About</h2><p>Hi, I am Black Raven, BS InfoTech graduate. I live and a freelancer in Cavite Philippines. I offer Creative Direction for online media as well as Screen & Interface design. I tell visual stories based on a strong idea in an aesthetic context. I understand design in general as philosophical handcraft. I believe in the magic of details. Love, light and rhythm.</p></div><div class="row"><div class="col-lg-6"><img src="assets/img/about-img.jpg" class="img-fluid" alt=""></div><div class="col-lg-6 pt-4 pt-lg-0 content"><h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3><p class="fst-italic"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><ul><li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </li><li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
@@ -248,6 +282,9 @@
                 </li></ul><p> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p></div></div></div></section> -->
     <!-- End About Section -->
     <!-- ======= 3 box Section ======= -->
+
+
+
     <section id="About" class="About section-bg">
       <div class="container">
         <div class="section-title">
@@ -265,6 +302,19 @@
 			</div>
 		  </div>
 		  <div class="height_divider_1"></div>
+
+
+		  <div class="circle_r">
+					
+			<div class="slider_cube">
+				<div class="container_cube">
+				  <div class="slide_cube x"></div>
+				  <div class="slide_cube y"></div>
+				  <div class="slide_cube z"></div>
+				</div>
+				<div class="shadow_cube"></div>
+			  </div>
+	</div>
 
 
 
@@ -317,12 +367,16 @@
       </div>
      
     </section>
+
+
+
+
     <!-- End 3 box Section -->
     <!-- ======= Cards Section ======= -->
     <!-- <section id="cards" class="cards"><div class="container"><div class="row"><div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0"><div class="card"><img src="assets/img/card-1.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title"><a href="">Autem sunt earum</a></h5><p class="card-text">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore</p><a href="#" class="btn">Explore more</a></div></div></div><div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0"><div class="card"><img src="assets/img/card-2.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title"><a href="">Nobis et tempore</a></h5><p class="card-text">Ut quas omnis est. Non et aut tempora dignissimos similique in dignissimos. Sit incidunt et odit iusto</p><a href="#" class="btn">Explore more</a></div></div></div><div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0"><div class="card"><img src="assets/img/card-3.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title"><a href="">Facere quia quae dolores</a></h5><p class="card-text">Modi ut et delectus. Modi nobis saepe voluptates nostrum. Sed quod consequatur quia provident dera</p><a href="#" class="btn">Explore more</a></div></div></div></div></div></section> -->
     <!-- End Cards Section -->
     <!-- ======= TIMELINE Section ======= -->
-    <section id="TIMELINE" class="TIMELINE section-bg">
+    <section id="Experience" class="TIMELINE section-bg">
       <div class="container">
         <div class="section-title">
       
@@ -331,11 +385,11 @@
 		  <div class="height_divider_1"></div>
 		  <div class="container_title">
 			<div class="Title">
-			  <h1 class="Title_h1">EXPERIENCES
+			  <h1 class="Title_h1">EXPERIENCE
 				<div class="Title__highlight"></div>
 			  </h1>
 			  <div class="Title__underline"></div>
-			  <div aria-hidden class="Title__filled">EXPERIENCES</div>
+			  <div aria-hidden class="Title__filled">EXPERIENCE</div>
 			</div>
 		  </div>
 		  <div class="height_divider_1"></div>
@@ -446,8 +500,6 @@
         <div class="text-center">
           <!-- <h3>SKILLS</h3> -->
           
-
-
 
 
 		  <div class="container_title">
@@ -687,7 +739,7 @@
             </div>
             <div class="col-sm-4">
               <div class="range" style="--p:81">
-                <div class="range__label">GOOGLE WEB MASTERTOOL</div>
+                <div class="range__label">GOOGLE SEARCH CONSOLE</div>
               </div>
             </div>
             <div class="col-sm-4">
@@ -918,6 +970,113 @@
       </div>
     </section>
     <!-- End Portfolio Section -->
+
+
+   <!-- ======= infinity Carousel ======= -->
+   <section id="infinity" class="infinity">
+
+	<div class="container_pictureSlider">
+	  <div class="pictureSlider poster-main" data-setting='{
+																					"width":1000,
+																					"height":321,
+																					"posterWidth":481,
+																					"posterHeight":321,
+																					"scale":0.8,
+																					"autoPlay":true,
+																					"delay":2000,
+																					"speed":300
+																					}'>
+		<div class="poster-btn poster-prev-btn"></div>
+		<ul class="poster-list">
+		  <li class="poster-item"><a href="#"><img src="img/1.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/2.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/3.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/4.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/5.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/6.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/7.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/8.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/9.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/10.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/11.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/12.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/13.png" width="100%" height="100%"></a></li>
+		  <li class="poster-item"><a href="#"><img src="img/14.png" width="100%" height="100%"></a></li>
+		</ul>
+		<div class="poster-btn poster-next-btn"></div>
+	  </div>
+
+	  <script>
+		$(function() {
+		  Carousel.init($(".pictureSlider"));
+		});
+	  </script>
+
+	</div>
+
+  </section>
+  <!-- End infinity Carousel Section -->
+
+
+<section id="marquee_box">
+
+	
+
+<!-- MARQUEE -->
+<div class="marquee">
+	<div class="marquee__group">
+	  <img src="figma/1.png" alt="x">
+	  <img src="figma/2.png" alt="x">
+	  <img src="figma/3.png" alt="x">
+	  <img src="figma/4.png" alt="x">
+	  <img src="figma/5.png" alt="x">
+	</div>
+  
+	<div aria-hidden="true" class="marquee__group">
+	  <img src="figma/1.png" alt="x">
+	  <img src="figma/2.png" alt="x">
+	  <img src="figma/3.png" alt="x">
+	  <img src="figma/4.png" alt="x">
+	  <img src="figma/5.png" alt="x">
+	</div>
+  </div>
+  
+  <div class="marquee marquee--borders" style="--duration: 100s">
+	<div class="marquee__group">
+	  <p>FIGMA</p>
+	  <p aria-hidden="true">SAMPLE</p>
+	  <p aria-hidden="true">FIGMA</p>
+	</div>
+  
+	<div aria-hidden="true" class="marquee__group">
+	  <p>SAMPLE</p>
+	  <p>FIGMA</p>
+	  <p>SAMPLE</p>
+	</div>
+  </div>
+  
+  <div class="marquee marquee--reverse">
+	<div class="marquee__group">
+	  <img src="figma/6.png" alt="x">
+	  <img src="figma/7.png" alt="x">
+	  <img src="figma/8.png" alt="x">
+	  <img src="figma/9.png" alt="x">
+	  <img src="figma/10.png" alt="x">
+	</div>
+  
+	<div aria-hidden="true" class="marquee__group">
+	  <img src="figma/6.png" alt="x">
+	  <img src="figma/7.png" alt="x">
+	  <img src="figma/8.png" alt="x">
+	  <img src="figma/9.png" alt="x">
+	  <img src="figma/10.png" alt="x">
+	</div>
+  </div>
+  <!-- MARQUEE -->
+</section>
+
+
+
     <!-- ======= SLICEBOX Section ======= -->
     <section id="GALLERY" class="TIMELINE section-bg">
       <p>&nbsp;</p>
@@ -987,33 +1146,14 @@
         <!-- /wrapper -->
       </div>
     </section>
-    <!-- ======= infinity ======= -->
-    <section id="infinity" class="infinity">
-      <!-- <div class="container"><div class="text-center"><h3>SKILLS1</h3><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><a class="cta-btn" href="#">Call To Action</a></div></div> -->
-      <div class="logos">
-        <div class="logos-slide">
-          <img src="./img/1.png" />
-          <img src="./img/2.png" />
-          <img src="./img/3.png" />
-          <img src="./img/4.png" />
-          <img src="./img/5.png" />
-          <img src="./img/6.png" />
-          <img src="./img/7.png" />
-          <img src="./img/8.png" />
-          <img src="./img/9.png" />
-          <img src="./img/10.png" />
-          <img src="./img/11.png" />
-          <img src="./img/12.png" />
-          <img src="./img/13.png" />
-          <img src="./img/14.png" />
-        </div>
-      </div>
-      <script>
-        var copy = document.querySelector(".logos-slide").cloneNode(true);
-        document.querySelector(".logos").appendChild(copy);
-      </script>
-    </section>
-    <!-- End infinity Section -->
+
+
+ 
+
+
+
+
+
     <!-- ======= Cta Section ======= -->
     <section id="ravenom" class="ravenom">
       <div class="text-container">
@@ -1564,6 +1704,7 @@
                   <i class="bx bx-chevron-right"></i>
                   <a href="#services">Graphic Design</a>
                 </li>
+				
               </ul>
             </div>
             <div class="col-lg-4 col-md-6 footer-newsletter">
@@ -1584,7 +1725,14 @@
         </div> -->
       </div>
 <br><br>
-    </footer>
+    
+
+</footer>
+
+
+
+
+
 	
 
 	<script>
